@@ -1,14 +1,13 @@
 :root {
-  color-scheme: light; /* Forzar al navegador a usar controles de modo claro */
   --bg: #f0da13; /* fondo amarillo sólido */
   --bg-1: #ffeb3b; /* alias */
   --bg-2: #fff8e1; /* degradado secundario suave */
   --accent: #ffd600; /* acento amarillo intenso */
   --accent-dark: #f2b705;
-  --text: #1b1b1b;
-  --muted: #5a4f00;
-  --card: #fff; /* tarjetas en blanco para contraste sobre fondo amarillo */
-  --insta-card-bg: #fff; /* recuadros de Instagram en blanco */
+  --text: #ffffff; /* Texto blanco para contraste */
+  --muted: #cccccc;
+  --card: #070707; /* tarjetas negras */
+  --insta-card-bg: #1a1a1a; /* recuadros de Instagram oscuros */
 }
 
 *{box-sizing:border-box}
