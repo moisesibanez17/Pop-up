@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light; /* Forzar al navegador a usar controles de modo claro */
   --bg: #f0da13; /* fondo amarillo sólido */
   --bg-1: #ffeb3b; /* alias */
   --bg-2: #fff8e1; /* degradado secundario suave */
@@ -6,8 +7,8 @@
   --accent-dark: #f2b705;
   --text: #1b1b1b;
   --muted: #5a4f00;
-  --card: #070707; /* tarjetas en blanco para contraste sobre fondo amarillo */
-  --insta-card-bg: #010101; /* recuadros de Instagram en blanco */
+  --card: #fff; /* tarjetas en blanco para contraste sobre fondo amarillo */
+  --insta-card-bg: #fff; /* recuadros de Instagram en blanco */
 }
 
 *{box-sizing:border-box}
@@ -112,16 +113,4 @@ code{background:#fff7cc;padding:3px 8px;border-radius:6px;font-size:0.95em}
   .container{padding:0}
   body{padding:16px}
   .card{padding:20px}
-}
-
-@media (prefers-color-scheme:dark){
-  /* En modo oscuro, mantenemos el FONDO AMARILLO BRILLANTE original (sin cambios),
-     pero oscurecemos las tarjetas para que el contenido sea legible y elegante. */
-  :root{
-    --card: #1a1a1a;       /* Tarjeta principal oscura */
-    --insta-card-bg: #252525; /* Tarjetas de Instagram oscuras */
-    --text: #f0f0f0;       /* Texto blanco */
-    --muted: #e0e0e0;      /* Texto secundario claro */
-    /* No sobreescribimos --bg ni .bg-anim para conservar la animación original */
-  }
 }
