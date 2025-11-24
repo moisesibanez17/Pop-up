@@ -11,8 +11,19 @@
 }
 
 *{box-sizing:border-box}
-html{min-height:100%}
-body{min-height:100vh;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg) !important;color:var(--text);display:flex;align-items:flex-start;justify-content:center;padding:28px}
+html{min-height:100%;-webkit-text-size-adjust:100%}
+body{
+  min-height:100vh;
+  min-height:100dvh; /* Modern mobile browsers */
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg) !important;
+  color:var(--text);
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+  padding:28px
+}
 
 .container{width:100%;max-width:920px;margin:auto}
 /* ensure content sits above animated background */
@@ -104,11 +115,13 @@ code{background:#fff7cc;padding:3px 8px;border-radius:6px;font-size:0.95em}
 }
 
 @media (prefers-color-scheme:dark){
-  :root{--bg-1:#3b2d00;--bg-2:#2b2000;--card:#2e2300;--text:#fff;--muted:#f4e3a3}
-  body{background:linear-gradient(180deg,var(--bg-1),var(--bg-2))}
-}
-
-@media (prefers-color-scheme:dark){
-  :root{--bg:#1a1a1a;--card:#111;--text:#eee;--muted:#bbb}
-  body{background:linear-gradient(180deg,#0f0f0f,#151515)}
+  /* En modo oscuro, mantenemos el FONDO AMARILLO BRILLANTE original (sin cambios),
+     pero oscurecemos las tarjetas para que el contenido sea legible y elegante. */
+  :root{
+    --card: #1a1a1a;       /* Tarjeta principal oscura */
+    --insta-card-bg: #252525; /* Tarjetas de Instagram oscuras */
+    --text: #f0f0f0;       /* Texto blanco */
+    --muted: #e0e0e0;      /* Texto secundario claro */
+    /* No sobreescribimos --bg ni .bg-anim para conservar la animación original */
+  }
 }
