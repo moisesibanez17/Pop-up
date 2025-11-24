@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nuestras redes — Instagram</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Redireccionamiento de pagina" />
+  </head>
+  <body>
+    <!-- Fondo animado dinámico (solo visual) -->
+    <div class="bg-anim" aria-hidden="true"></div>
+    <main class="container">
+      <section class="card">
+        <!-- Imagen central (solo mostrar DIFERENTE.png en medio de la página) -->
+        <div class="center-image">
+          <img src="assets/DIFERENTE.png" alt="Diferente" />
+        </div>
+
+        <h1>Siguenos en nuestras redes</h1>
+        <p class="subtitle">Sigue nuestras cuentas de Instagram para estar al pendiente de nuestros eventos, dinamicas y visitas industriales.</p>       
+
+        <!-- Lista de 3 Instagram: cada uno usa una imagen del folder assets -->
+        <div class="instagram-grid">
+          <a class="insta-card" href="https://instagram.com/grupoingenierias_cucei" target="_blank" rel="noopener noreferrer">
+            <img src="assets/GI WY.png" alt="IG 1" />
+            <div class="insta-info">
+              <strong>@grupoingenierias_cucei</strong>
+              <span>Síguenos</span>
+            </div>
+          </a>
+
+          <a class="insta-card" href="https://instagram.com/grupodivtic_cucei" target="_blank" rel="noopener noreferrer">
+            <img src="assets/GD WY.png" alt="IG 2" />
+            <div class="insta-info">
+              <strong>@grupodivtic_cucei</strong>
+              <span>Síguenos</span>
+            </div>
+          </a>
+
+          <a class="insta-card" href="https://instagram.com/grupobasicas_cucei" target="_blank" rel="noopener noreferrer">
+            <img src="assets/GB WY.png" alt="IG 3" />
+            <div class="insta-info">
+              <strong>@grupobasicas_cucei</strong>
+              <span>Síguenos</span>
+            </div>
+          </a>
+        </div>
+
+        <p class="small">Enlace al formulario aqui:</p>
+        <button id="redirectBtn" class="btn redirect" type="button" aria-label="Ir a otra página">
+          Visitar Formulario
+        </button>
+
+        <p class="note">El registro en el formulario es importante para participar en nuestras actividades. Los cupos del registro son limitados.</p>
+      </section>
+    </main>
+
+    <script>
+      // URL de redirección del botón — actualízala aquí si lo deseas.
+      const targetUrl = 'https://example.com';
+      document.getElementById('redirectBtn').addEventListener('click', () => {
+        window.open(targetUrl, '_blank', 'noopener');
+      });
+    </script>
+  </body>
+</html>
